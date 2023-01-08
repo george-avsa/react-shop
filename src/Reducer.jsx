@@ -15,7 +15,7 @@ export const reducer = (state, { type, payload }) => {
                 ...state,
                 order: state.order.map((good) => {
                     if (payload === good.id) {
-                        good.amount = good.amount > 1 ? good.amount - 0.5 : 1;
+                        good.amount = good.amount > 1 ? good.amount - 1 : 1;
                     }
                     return good;
                 }),
